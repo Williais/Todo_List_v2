@@ -1,0 +1,167 @@
+body {
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding-top: 15vh;
+}
+
+.app-container {
+  width: 100%;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.titulo {
+  color: #f3f4f6;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+#container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#contagem_task {
+  background-color: #1e252f;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid #2d3748;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.02);
+}
+
+.destaque-numero {
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+.container-input {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+#input {
+  flex: 1;
+  background-color: #1e252f;
+  color: #f3f4f6;
+  padding: 16px 20px;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.02);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+#input::placeholder {
+  color: #6b7280;
+}
+
+#input:focus {
+  border-color: #8b5cf6;
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.02),
+    0 0 0 2px rgba(139, 92, 246, 0.3);
+}
+
+.btn-adicionar {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  padding: 0 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(139, 92, 246, 0.2);
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-adicionar:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 12px rgba(139, 92, 246, 0.4);
+}
+
+.btn-adicionar:active {
+  transform: scale(0.96);
+}
+
+.container-task {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #1e252f;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255,255, 255, 0.02);
+  width: 100%;
+}
+
+.container-task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #8B5CF6;
+  cursor: pointer;
+}
+
+.texto-tarefa {
+  flex: 1;
+  color: #E5E7EB;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.container-btn {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  color: #8B5CF6;
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.riscado {
+  text-decoration: line-through;
+  color: #6b7280;
+}
