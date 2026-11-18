@@ -65,9 +65,12 @@ function App() {
     localStorage.setItem("@minhas-tarefas", JSON.stringify(tasks))
   }, [tasks])
 
+  const taskTotalizada = tasks.length
+  const taskConcluida = tasks.filter((task) => task.concluida === true).length
+
   return (
     <main className="app-container">
-      <Header totalTask={5} completa={2}/>
+      <Header totalTask={taskTotalizada} completa={taskConcluida}/>
 
       <div className="container-input">
 
@@ -85,7 +88,16 @@ function App() {
       </div>
 
       {
-        tasks.map((task) => (
+        tasks.length === 0 ? (
+          <div className="empty-state">
+          <img 
+            src={"./src/assets/empty.png"} 
+            alt="Nenhuma tarefa" 
+          />
+          <p>Nenhuma task cadastrada</p>
+        </div>
+        ):(
+          tasks.map((task) => (
 
           <Task 
             key={task.id} 
@@ -94,7 +106,7 @@ function App() {
             onDelete={handleDeletar}
             onEdit={handleEditar}
             />
-        ))
+        )))
       }
 
 

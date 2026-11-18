@@ -165,3 +165,27 @@ body {
   text-decoration: line-through;
   color: #6b7280;
 }
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6b7280;
+    text-align: center;
+}
+
+.empty-state img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+.empty-state p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
